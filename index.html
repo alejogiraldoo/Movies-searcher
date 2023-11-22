@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Searcher</title>
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="searcher">
+        <h1 class="searcher__title">Buscador de Contenido Digital</h1>
+        <div class="searcher__content-type">
+            <label for="tipoContenido" class="content-type__title">Seleccione una opción:</label>
+            <select id="tipoContenido" class="content-type__option">
+                <option value="Peliculas">Peliculas</option>
+                <option value="Series">Series</option>
+            </select>
+        </div>
+        <div class="searcher__filter">
+            <input id="busqueda" class="filter__movie" type="search" placeholder="Escriba el nombre de la Pelicula">
+            <button id="btnBuscar" class="filter__search">Buscar</button>
+        </div>
+        <ul id="listaContenido" class="searcher__movies"></ul>
+    </section>
+</body>
+<!-- JS document -->
+<script src="main.js"></script>
+</html>

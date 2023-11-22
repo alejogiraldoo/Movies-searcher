@@ -1,0 +1,116 @@
+/* Style sheet */
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+}
+
+.searcher{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-image: url('background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0 0;
+}
+
+.searcher__title{
+    text-align: center;
+    color: rgb(8, 94, 255);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.searcher__title::first-letter{
+    font-size: 2.5rem;
+}
+
+.content-type__title{
+    color: rgb(252, 120, 26);
+    font-weight: bold;
+}
+
+.content-type__option, .filter__movie, .filter__search{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 7px;
+    border: none;
+}
+
+.filter__search{
+    background-color:rgb(100, 149, 237);
+}
+
+.filter__search:hover{
+    background-color: rgb(252, 120, 26);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.searcher__movies{
+    background-color: rgba(100, 148, 237, 0.451);
+    overflow-y: auto;
+    list-style: none;
+    border-radius: 7px;
+    width: 100%;
+    padding: 30px;
+    flex-grow: 2;
+    display: none;
+}
+
+.movies__content:hover{
+    cursor: pointer;
+}
+
+.movie__name, .movie__description{
+    font-weight: bold;
+}
+
+.movie__name{
+    display: block;
+    font-weight: bold;
+    margin: 20px 0;
+    background-color: rgba(252, 120, 26, 0.861);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.movie__text{
+    height: 0;
+    overflow: hidden;
+    transition: .5s height;
+}
+
+@media screen and (min-width: 800px){
+    .searcher{
+        padding: 100px 0 0;
+    }
+    
+    .searcher__content-type, .searcher__filter{
+        text-align: center;
+        width: 100%;
+    }
+
+    .content-type__title, .content-type__option, .filter__movie{
+        margin: 0 10px;
+        max-width: 350px;
+    }
+
+    .searcher__movies{
+        margin-top: 30px;
+        width: 800px;
+    }
+
+    .filter__search{
+        max-width: 150px;
+    }
+}
